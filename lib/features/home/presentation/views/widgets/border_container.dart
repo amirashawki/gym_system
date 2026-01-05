@@ -31,8 +31,10 @@ class BorderContainer extends StatelessWidget {
       ),
 
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          SizedBox(width: 30,),
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: Icon(icons,
