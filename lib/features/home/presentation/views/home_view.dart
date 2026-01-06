@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:gym_system/core/utils/app_router.dart';
 import 'package:gym_system/core/utils/constant.dart';
 import 'package:gym_system/features/home/presentation/views/widgets/border_container.dart';
+import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -12,7 +15,7 @@ class HomeView extends StatelessWidget {
         padding: const EdgeInsets.all(10.0),
         child: Column(
           children: [
-             // ************* Logo Gym *************
+            // ************* Logo Gym *************
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.start,
@@ -23,40 +26,64 @@ class HomeView extends StatelessWidget {
                   height: 130,
                   color: AppColors.kprimaryColor,
                 ),
-                SizedBox(width: 300,),
               ],
             ),
-             // ************* Sizebox *************
-            SizedBox(height: 5,),
+            // ************* Sizebox *************
+            SizedBox(height: 5),
             // ************* Text *************
-            Text('Gym Management System', style: TextStyle(
-              fontSize: 35,
-              fontWeight: FontWeight.w600,
-              color: Colors.white
+            Text(
+              'Gym Management System',
+              style: TextStyle(
+                fontSize: 35,
+                fontWeight: FontWeight.w600,
+                color: Colors.white,
               ),
-              ),
-            SizedBox(height: 10,),
+            ),
+            SizedBox(height: 10),
             // ************* Text 2 *************
-            Text('Professional Management Members', style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w400,
-              color: AppColors.ksubTitleColor,
+            Text(
+              'Professional Management Members',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w400,
+                color: Color(0xff9AA4C7),
               ),
-              ),
+            ),
             // ************* Sizebox ************
-            SizedBox(height: 80,),
-            // ************* Border 1 ************
-            BorderContainer(icons: Icons.person, text1: 'View Members', text2: 'Browse all gym members and subscriptions',),
-            SizedBox(height: 20,),
+            SizedBox(height: 40),
             // ************* Border 2 ************
-            BorderContainer(icons: Icons.person_add_alt_1_outlined, text1: 'Add new Members', text2: 'Register a new gym member',),
-            SizedBox(height: 20,),
+            BorderContainer(
+              icons: Iconsax.people,
+              text1: 'View Members',
+              text2: 'Browse all gym members and subscriptions',
+              onTap: () {
+                GoRouter.of(context).push(AppRouter.kViewUsersView);
+              },
+            ),
+            SizedBox(height: 15),
+            // ************* Border 2 ************
+            BorderContainer(
+              icons: Iconsax.user_add,
+              text1: 'Add new Members',
+              text2: 'Register a new gym member',
+              onTap: () {
+                GoRouter.of(context).push(AppRouter.kAddUserView);
+              },
+            ),
+            SizedBox(height: 15),
+
             // ************* Border 3 ************
-            BorderContainer(icons: Icons.qr_code, text1: 'Scan QR Subscription', text2: 'Verify member subscription status',),
+            BorderContainer(
+              icons: Iconsax.scanning,
+              text1: 'Scan QR Subscription',
+              text2: 'Verify member subscription status',
+              onTap: () {
+                GoRouter.of(context).push(AppRouter.kScanQrView);
+              },
+            ),
           ],
         ),
       ),
     );
   }
 }
-
