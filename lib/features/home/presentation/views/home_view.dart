@@ -47,10 +47,10 @@ class HomeView extends StatelessWidget {
             SizedBox(height: 80,),
             // ************* Border 1 ************
             BorderContainer(icons: Icons.person, text1: 'View Members', text2: 'Browse all gym members and subscriptions',),
-            SizedBox(height: 15,),
+            SizedBox(height: 20,),
             // ************* Border 2 ************
             BorderContainer(icons: Icons.person_add_alt_1_outlined, text1: 'Add new Members', text2: 'Register a new gym member',),
-            SizedBox(height: 15,),
+            SizedBox(height: 20,),
             // ************* Border 3 ************
             BorderContainer(icons: Icons.qr_code, text1: 'Scan QR Subscription', text2: 'Verify member subscription status',),
           ],
