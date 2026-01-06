@@ -3,7 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:gym_system/core/utils/app_router.dart';
 import 'package:gym_system/core/utils/constant.dart';
 import 'package:gym_system/features/home/presentation/views/widgets/border_container.dart';
-import 'package:iconsax/iconsax.dart';
+import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -51,7 +51,7 @@ class HomeView extends StatelessWidget {
             ),
             // ************* Sizebox ************
             SizedBox(height: 40),
-            // ************* Border 1 ************
+            // ************* Border 2 ************
             BorderContainer(
               icons: Iconsax.people,
               text1: 'View Members',
@@ -71,6 +71,7 @@ class HomeView extends StatelessWidget {
               },
             ),
             SizedBox(height: 15),
+
             // ************* Border 3 ************
             BorderContainer(
               icons: Iconsax.scanning,

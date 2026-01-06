@@ -31,6 +31,7 @@ class _BorderContainerState extends State<BorderContainer> {
       onExit: (event) => setState(() {
         isHover = false;
       }),
+
       child: GestureDetector(
         onTap: widget.onTap,
         child: AnimatedContainer(
@@ -54,7 +55,7 @@ class _BorderContainerState extends State<BorderContainer> {
               ),
             ],
           ),
-
+          // *************** Body content ******************
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
