@@ -12,4 +12,5 @@ class AppColors {
   static const kContainerBackgroundColor = Color(0xff151C2F);
   //1A2238
   static const kprimaryColor = Color.fromARGB(255, 255, 17, 0);
+  static const ksubTitleColor = Color(0xFF9E9E9E);
 }
