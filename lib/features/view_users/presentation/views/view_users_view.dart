@@ -34,7 +34,7 @@ class _ViewUsersViewState extends State<ViewUsersView> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // ************* Back *************
+                // ************* Back ************
                 Row(
                   children: [
                     IconButton(
