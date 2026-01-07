@@ -4,6 +4,7 @@ import 'package:gym_system/core/utils/constant.dart';
 import 'package:gym_system/features/add_user/presentation/views/widgets/custom_dropdown.dart';
 import 'package:gym_system/features/add_user/presentation/views/widgets/date_field.dart';
 import 'package:gym_system/features/add_user/presentation/views/widgets/text_field.dart';
+import 'package:gym_system/features/add_user/presentation/views/widgets/upload_photo.dart';
 import 'package:iconsax/iconsax.dart';
 
 class AddMemberCard extends StatelessWidget {
@@ -22,6 +23,7 @@ class AddMemberCard extends StatelessWidget {
           BoxShadow(
             color: Colors.black.withOpacity(0.5),
             blurRadius: 20,
+
             offset: const Offset(0, 10),
           ),
         ],
@@ -38,7 +40,11 @@ class AddMemberCard extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          // ************* Sizebox ************
+          // ************* Sizebox ************c
+          const SizedBox(height: 10),
+          // *************  photo ************
+          labelofText('Upload Photo', Iconsax.picture_frame),
+          UploadPhoto(),
           const SizedBox(height: 10),
           // ************* Field 1 ************
           labelofText('Full Name', Iconsax.user),
@@ -56,7 +62,7 @@ class AddMemberCard extends StatelessWidget {
           labelofText('Start date', Iconsax.calendar_edit),
           dateField(context),
           const SizedBox(height: 24),
-           // ************* Button ************
+          // ************* Button ************
           customButton(
             text: 'Add Member',
             onPressed: () {},

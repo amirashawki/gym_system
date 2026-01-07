@@ -10,13 +10,15 @@ class AddUserView extends StatelessWidget {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(20.0),
-        child: Column(
-          children: [
-            SizedBox(height: 20),
-            Center(child: CutomButtonBack()),
-            SizedBox(height: 20),
-            Center(child: AddMemberCard()),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(height: 20),
+              Center(child: CutomButtonBack()),
+              SizedBox(height: 20),
+              Center(child: AddMemberCard()),
+            ],
+          ),
         ),
       ),
     );
