@@ -15,7 +15,7 @@ class HomeView extends StatelessWidget {
         padding: const EdgeInsets.all(10.0),
         child: Column(
           children: [
-            // ************* Logo Gym *************
+            // ************* Logo Gym ************
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.start,
