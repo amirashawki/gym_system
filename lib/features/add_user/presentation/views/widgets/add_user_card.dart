@@ -46,7 +46,7 @@ class AddMemberCard extends StatelessWidget {
           SizedBox(height: 10),
           // ************* Field 2 ************
           labelofText('Phone Number', Iconsax.call),
-          TextFormFieldd(hint: '+1 234-567-8900'),
+          TextFormFieldd(hint: '+20 XXX XXX XXXX'),
           SizedBox(height: 10),
           // ************* Field 3 ************
           labelofText('Subscription Duration', Iconsax.timer_start),
