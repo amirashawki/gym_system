@@ -17,25 +17,6 @@ Widget labelofText(String text, IconData? icon) {
   );
 }
 
-Widget inputField(String hint) {
-  return TextField(
-    style: const TextStyle(color: Colors.white),
-    decoration: InputDecoration(
-      hintText: hint,
-      hintStyle: const TextStyle(
-        color: Color(0xFF7F8DB5),
-        fontSize: 14,
-        fontWeight: FontWeight.w400,
-      ),
-      filled: true,
-      fillColor: Color(0xFF1E273D),
-      border: borderofTextfield(),
-      enabledBorder: borderofTextfield(),
-      focusedBorder: borderofTextfield(focus: true),
-      contentPadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 14),
-    ),
-  );
-}
 
 OutlineInputBorder borderofTextfield({bool focus = false}) {
   return OutlineInputBorder(

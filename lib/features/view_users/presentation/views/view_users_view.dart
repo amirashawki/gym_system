@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gym_system/core/utils/constant.dart';
-import 'package:gym_system/features/view_users/widgets/build_table.dart';
+import 'package:gym_system/core/widgets/cutom_button_back.dart';
+import 'package:gym_system/features/view_users/presentation/views/widgets/build_table.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 class ViewUsersView extends StatefulWidget {
@@ -33,33 +34,10 @@ class _ViewUsersViewState extends State<ViewUsersView> {
             padding: const EdgeInsetsGeometry.only(left: 200, right: 200, top: 80, bottom: 80),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
+              
               children: [
                 // ************* Back ************
-                Row(
-                  children: [
-                    IconButton(
-                      onPressed: () {
-                      Navigator.pop(context);  
-                     },
-                     padding: EdgeInsets.zero,
-                     constraints: BoxConstraints(),
-                     icon: Icon(
-                      Iconsax.close_circle,  
-                      color: AppColors.ksubTitleColor,
-                      size: 20,
-                     ),
-                    ),
-                    const SizedBox(width: 10),
-                    Text(
-                      'Back to home',
-                      style: TextStyle(
-                        color: AppColors.ksubTitleColor,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                  ],
-                ),
+                CutomButtonBack(),
                 // ************* Sizebox *************
                 const SizedBox(height: 40),
                 // ************* Text *************

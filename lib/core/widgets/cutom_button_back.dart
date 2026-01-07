@@ -26,12 +26,16 @@ class _CutomButtonBackState extends State<CutomButtonBack> {
               onPressed: () {
                 Navigator.pop(context);
               },
+              padding: EdgeInsets.zero,
+              constraints: BoxConstraints(),
               icon: Icon(
                 Icons.arrow_back,
                 size: 19,
                 color: isHover ? Colors.white : Color(0xff9AA4C7),
               ),
             ),
+            SizedBox(width: 10,),
+
             Text(
               'Back To Home',
               style: TextStyle(

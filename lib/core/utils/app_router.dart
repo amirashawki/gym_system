@@ -9,32 +9,11 @@ abstract class AppRouter {
   static final kAddUserView = '/AddUserView';
   static final kViewUsersView = '/ViewUsersView';
   static final router = GoRouter(
-    routes: [
-      GoRoute(
-        path: '/',
-        builder: (context, state) {
-          return HomeView();
-        },
-      ),
-      GoRoute(
-        path: kScanQrView,
-        builder: (context, state) {
-          return ScanQrView();
-        },
-      ),
+    routes: [GoRoute(  path: '/',  builder: (context, state) {return HomeView();},),
+      GoRoute(path: kScanQrView,builder: (context, state) {  return ScanQrView();},),
 
-      GoRoute(
-        path: kAddUserView,
-        builder: (context, state) {
-          return AddUserView();
-        },
-      ),
-      GoRoute(
-        path: kViewUsersView,
-        builder: (context, state) {
-          return ViewUsersView();
-        },
-      ),
+      GoRoute(path: kAddUserView,builder: (context, state) {  return AddUserView();},),
+      GoRoute(path: kViewUsersView,builder: (context, state) {  return ViewUsersView();},),
     ],
   );
 }
