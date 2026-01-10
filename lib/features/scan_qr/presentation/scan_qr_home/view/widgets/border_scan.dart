@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:gym_system/core/components/components.dart';
 import 'package:gym_system/core/utils/constant.dart';
+import 'package:gym_system/features/scan_qr/presentation/scan_qr_home/action/scan_qr_action.dart';
 import 'package:gym_system/features/scan_qr/presentation/scan_qr_home/view/widgets/Instruction_item.dart';
 
 class BorderScan extends StatelessWidget {
@@ -84,6 +86,14 @@ class BorderScan extends StatelessWidget {
                             fontWeight: FontWeight.w400,
                           ),
                         ),
+                        
+                        // ************* Button start ************
+                        customButton(
+                          widgth: 140,
+                          height: 40,
+                          text: 'Start Scanning',
+                          onPressed: () => ScanQrAction.startScanning_action(context, "start_scanning"),
+                        )
                       ],
                     ),
                   ),
