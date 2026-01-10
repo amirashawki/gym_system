@@ -23,9 +23,9 @@ class UploadPhoto extends StatelessWidget {
             ),
           ),
           Positioned(
-            bottom: 12,
+            bottom: 15,
             right: 0,
-            child: Icon(Iconsax.edit, color: Color(0xFF7F8DB5), size: 15),
+            child: Icon(Iconsax.edit, color: AppColors.kprimaryColor, size: 17),
           ),
         ],
       ),

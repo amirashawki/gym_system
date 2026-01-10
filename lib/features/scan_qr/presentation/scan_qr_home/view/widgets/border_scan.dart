@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gym_system/core/utils/constant.dart';
-import 'package:gym_system/features/scan_qr/presentation/views/widgets/Instruction_item.dart';
+import 'package:gym_system/features/scan_qr/presentation/scan_qr_home/view/widgets/Instruction_item.dart';
 
 class BorderScan extends StatelessWidget {
   const BorderScan({super.key});

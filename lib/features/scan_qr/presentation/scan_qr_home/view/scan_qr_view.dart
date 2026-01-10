@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gym_system/core/widgets/cutom_button_back.dart';
-import 'package:gym_system/features/scan_qr/presentation/views/widgets/border_scan.dart';
+import 'package:gym_system/features/scan_qr/presentation/scan_qr_home/view/widgets/border_scan.dart';
 
 class ScanQrView extends StatelessWidget {
   const ScanQrView({super.key});
