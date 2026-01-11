@@ -14,7 +14,7 @@ class AddUserView extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: 20),
-              Center(child: CutomButtonBack()),
+              Center(child: CutomButtonBack(width: 480)),
               SizedBox(height: 20),
               Center(child: AddMemberCard()),
             ],

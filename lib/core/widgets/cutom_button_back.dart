@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CutomButtonBack extends StatefulWidget {
-  const CutomButtonBack({super.key});
-
+  const CutomButtonBack({this.width, super.key});
+  final double? width;
   @override
   State<CutomButtonBack> createState() => _CutomButtonBackState();
 }
@@ -19,7 +19,7 @@ class _CutomButtonBackState extends State<CutomButtonBack> {
         isHover = false;
       }),
       child: SizedBox(
-        width: 520,
+        width: widget.width ?? 520,
         child: Row(
           children: [
             IconButton(
@@ -34,7 +34,7 @@ class _CutomButtonBackState extends State<CutomButtonBack> {
                 color: isHover ? Colors.white : Color(0xff9AA4C7),
               ),
             ),
-            SizedBox(width: 10,),
+            SizedBox(width: 10),
 
             Text(
               'Back To Home',
