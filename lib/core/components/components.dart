@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:gym_system/core/utils/constant.dart';
 import 'package:gym_system/features/add_user/presentation/views/widgets/text_field.dart';
+// ******************************* Navigator And push
+void NavaigtorAndFinish(context, Widget widget) {
+  Navigator.pushAndRemoveUntil(context, 
+  MaterialPageRoute(builder: (context) => widget),
+  (Route <dynamic> route) => false
+  );
+}
 
 // ******************************* Text Form Field
 Widget TextFormFieldd({required String? hint, bool focus = false}) {
@@ -27,6 +34,7 @@ Widget TextFormFieldd({required String? hint, bool focus = false}) {
 Widget customButton({
   double? widgth,
   double? height,
+  double? fontsizee,
   required String text,
   required VoidCallback onPressed,
 }) {
@@ -42,9 +50,9 @@ Widget customButton({
       ),
       child: Text(
         text,
-        style: const TextStyle(
+        style: TextStyle(
           color: Colors.white,
-          fontSize: 16,
+          fontSize: fontsizee ?? 16 ,
           fontWeight: FontWeight.w600,
         ),
       ),

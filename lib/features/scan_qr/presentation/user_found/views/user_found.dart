@@ -9,7 +9,7 @@ class UserFoundView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: AppColors.kContainerBackgroundColor,
       body: Column(
         children: [
           SizedBox(height: 20),

@@ -54,7 +54,7 @@ class BorderScan extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        // ************* Avatar ************
+                        // ************* Camera ************
                         CircleAvatar(
                           radius: 40,
                           backgroundColor: AppColors.kColors,
@@ -65,7 +65,7 @@ class BorderScan extends StatelessWidget {
                           ),
                         ),
                         // ************* Sizebox ************
-                        SizedBox(height: 10),
+                        SizedBox(height: 20),
                         // ************* Ready to scan ************
                         Text(
                           'Ready to Scan',
@@ -76,7 +76,7 @@ class BorderScan extends StatelessWidget {
                           ),
                         ),
                         // ************* Sizebox ************
-                        SizedBox(height: 15),
+                        SizedBox(height: 5),
                         // ************* Position the QR code ************
                         Text(
                           'Position the QR code within the frame to scan',
@@ -86,12 +86,14 @@ class BorderScan extends StatelessWidget {
                             fontWeight: FontWeight.w400,
                           ),
                         ),
-                        
+                        // ************* Sizebox ************
+                        SizedBox(height: 35),
                         // ************* Button start ************
                         customButton(
                           widgth: 140,
                           height: 40,
-                          text: 'Start Scanning',
+                          fontsizee: 13,
+                          text: 'Start Scan',
                           onPressed: () => ScanQrAction.startScanning_action(context, "start_scanning"),
                         )
                       ],

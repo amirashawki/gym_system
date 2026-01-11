@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:gym_system/core/components/components.dart';
+import 'package:gym_system/core/utils/app_router.dart';
 import 'package:gym_system/core/utils/constant.dart';
+import 'package:gym_system/features/home/presentation/views/home_view.dart';
 
 class ScanButton extends StatelessWidget {
   const ScanButton({super.key});
@@ -8,6 +12,7 @@ class ScanButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
+        // ******************************** Button 1
         Expanded(
           child: ElevatedButton(
             onPressed: () {},
@@ -24,10 +29,16 @@ class ScanButton extends StatelessWidget {
             ),
           ),
         ),
+
+        // ******************************** Sizebox
         const SizedBox(width: 16),
+
+        // ******************************** Button 2
         Expanded(
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              NavaigtorAndFinish(context, HomeView());
+            },
             style: ElevatedButton.styleFrom(
               backgroundColor: AppColors.darkButton,
               padding: const EdgeInsets.symmetric(vertical: 14),

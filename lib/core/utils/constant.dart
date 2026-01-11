@@ -19,8 +19,5 @@ class AppColors {
 
   static const white = Colors.white;
   static const subText = Color(0xFF9AA4C7);
-
-  static const red = Color(0xFFFF3B3B);
-  static const purple = Color(0xFFA855F7);
   static const darkButton = Color(0xFF2B364A);
 }

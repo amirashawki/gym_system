@@ -9,10 +9,10 @@ class UserDataCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 480,
+      width: 500,
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: AppColors.container,
+        color: AppColors.kContainerBackgroundColor,
         borderRadius: BorderRadius.circular(16),
         border: Border.all(color: AppColors.border),
         boxShadow: [
@@ -26,16 +26,29 @@ class UserDataCard extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          //image
-          Container(
-            height: 70,
-            width: 70,
-            decoration: const BoxDecoration(shape: BoxShape.circle),
-            child: const Icon(Icons.person, color: Colors.white, size: 32),
+           // ******************************** Exit
+           Align(
+            alignment: Alignment.topRight,
+             child: IconButton(onPressed: () {
+               Navigator.pop(context);
+             }, icon: Icon(Icons.close, color: Colors.white, size: 25,)),
+           ),
+          const SizedBox(height: 16),
+           // ******************************** image
+          CircleAvatar(
+            radius: 80,
+            child: ClipOval(
+              child: Image.asset('assets/images/tom.webp',
+              fit: BoxFit.cover,
+              width: 160,
+              height: 160,
+              ),
+            ),
+            
           ),
 
           const SizedBox(height: 16),
-
+           // ******************************** Scanned qr code
           const Text(
             'QR Code Scanned',
             style: TextStyle(
@@ -46,20 +59,19 @@ class UserDataCard extends StatelessWidget {
           ),
 
           const SizedBox(height: 6),
-
+           // ******************************** Subscription
           const Text(
             'Subscription Expired',
-            style: TextStyle(color: AppColors.red, fontSize: 14),
+            style: TextStyle(color: AppColors.kprimaryColor, fontSize: 14),
           ),
 
           const SizedBox(height: 24),
-
-          // Member Details
+           // ******************************** Member Details
           Container(
             width: 440,
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
-              color: AppColors.innerContainer,
+              color: AppColors.kContainerBackgroundColor_2,
               borderRadius: BorderRadius.circular(12),
               border: Border.all(color: AppColors.border),
             ),
@@ -80,17 +92,21 @@ class UserDataCard extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 16),
-
+                 // ******************************** Name
                 customrow('Name:', 'Sarah Johnson'),
+                 // ******************************** Phone
                 customrow('Phone:', '+1 234-567-8902'),
-
+                 // ******************************** ID
+                customrow('Id:', '65'),
+                 // ******************************** Divider
                 const Divider(color: AppColors.border, height: 28),
-
+                 // ******************************** Start date
                 customrow('Start Date:', '11/15/2024'),
+                 // ******************************** End date
                 customrow('End Date:', '12/15/2024'),
-
+                 // ******************************** Sizebox
                 const SizedBox(height: 12),
-
+                 // ******************************** Status
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -104,22 +120,24 @@ class UserDataCard extends StatelessWidget {
                         vertical: 6,
                       ),
                       decoration: BoxDecoration(
-                        color: AppColors.red.withOpacity(0.15),
+                        color: AppColors.kprimaryColor.withOpacity(0.15),
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: const Text(
                         'Expired',
-                        style: TextStyle(color: AppColors.red, fontSize: 12),
+                        style: TextStyle(color: AppColors.kprimaryColor, fontSize: 12),
                       ),
                     ),
                   ],
                 ),
-                // Buttons
+                 // ******************************** Sizebox
                 const SizedBox(height: 24),
+                  // ******************************** Button
                 ScanButton(),
               ],
             ),
           ),
+      
         ],
       ),
     );

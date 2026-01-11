@@ -7,7 +7,9 @@ Widget customrow(String label, String value) {
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
+                 // ******************************** Text 1
         Text(label, style: const TextStyle(color: AppColors.subText)),
+                 // ******************************** Text 2
         Text(value, style: const TextStyle(color: Colors.white, fontSize: 13)),
       ],
     ),
