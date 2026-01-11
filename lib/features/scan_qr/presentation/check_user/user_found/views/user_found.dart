@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gym_system/core/utils/constant.dart';
 import 'package:gym_system/core/widgets/cutom_button_back.dart';
-import 'package:gym_system/features/scan_qr/presentation/user_found/views/widgets/user_data_card.dart';
+import 'package:gym_system/features/scan_qr/presentation/check_user/user_found/views/widgets/user_data_card.dart';
 
 class UserFoundView extends StatelessWidget {
   const UserFoundView({super.key});

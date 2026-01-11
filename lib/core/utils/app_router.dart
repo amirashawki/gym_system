@@ -2,7 +2,7 @@ import 'package:go_router/go_router.dart';
 import 'package:gym_system/features/add_user/presentation/views/add_user_view.dart';
 import 'package:gym_system/features/home/presentation/views/home_view.dart';
 import 'package:gym_system/features/scan_qr/presentation/scan_qr_home/view/scan_qr_view.dart';
-import 'package:gym_system/features/scan_qr/presentation/user_found/views/user_found.dart';
+import 'package:gym_system/features/scan_qr/presentation/check_user/user_found/views/user_found.dart';
 import 'package:gym_system/features/view_users/presentation/views/view_users_view.dart';
 
 abstract class AppRouter {

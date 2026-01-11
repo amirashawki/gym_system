@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gym_system/core/utils/constant.dart';
-import 'package:gym_system/features/scan_qr/presentation/user_found/views/widgets/custom_row.dart';
-import 'package:gym_system/features/scan_qr/presentation/user_found/views/widgets/scan_button.dart';
+import 'package:gym_system/features/scan_qr/presentation/check_user/user_found/views/widgets/custom_row.dart';
+import 'package:gym_system/features/scan_qr/presentation/check_user/user_found/views/widgets/scan_button.dart';
 
 class UserDataCard extends StatelessWidget {
   const UserDataCard({super.key});

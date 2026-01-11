@@ -35,6 +35,7 @@ Widget customButton({
   double? widgth,
   double? height,
   double? fontsizee,
+  Color? color_background,
   required String text,
   required VoidCallback onPressed,
 }) {
@@ -44,7 +45,7 @@ Widget customButton({
     child: ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-        backgroundColor: AppColors.kprimaryColor,
+        backgroundColor: color_background ?? AppColors.kprimaryColor,
         foregroundColor: Colors.white,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       ),
